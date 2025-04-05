@@ -95,9 +95,9 @@
 - `final_date`: Fecha de término.  
 - `price_room`: Precio por noche.  
 - `night_count`: Número de noches reservadas.  
-- `temperature`: Temperatura escogida para la habitación.  
 - `amount`: Monto total.  
 - `state`: Estado de la reserva (confirmada, cancelada, finalizada).
+- `preferences_id`: Id de las preferencias del cliente. 
 
 ---
 
@@ -189,10 +189,11 @@
 **Descripción**: Representa los mensajes o alertas generadas dentro del sistema, dirigidas a distintos tipos de usuarios (dueños, administradores, etc.).
 
 - `id`: Identificador único de la notificación.  
-- `owners_id`: ID del dueño que recibe la notificación (opcional).  
-- `admins_id`: ID del administrador que recibe la notificación (opcional).  
-- `title`: Título de la notificación.  
-- `description`: Detalle o contenido de la notificación.
+- `sender_id`: ID del usuario que envia la notificación.  
+- `reciever_id`: ID del usuario que recibe la notificación.  
+- `title`: Título de la notificación.
+- `sender_type`: Tipo del usuario que envia la notificación.
+- `content`: Contenido de la notificación.
 
 ---
 
@@ -201,3 +202,12 @@
 
 - `owners_id`: ID del dueño.  
 - `code`: Código único asociado.
+
+---
+
+### 19. **Customer Preferences**
+**Descripción**: Contiene las preferencias que el cliente determina para su reserva. 
+
+- `id`: Identificador único de las preferencias del cliente.  
+- `customers_id`: ID del cliente.  
+- `temperature`: Código único asociado.
